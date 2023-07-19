@@ -29,7 +29,13 @@ class MessagesListController<T extends MessageBase> extends ChangeNotifier {
     this._items.addAll(items);
     notifyListeners();
   }
+  void replaceAll(List<T> items) {
+    this._items.clear();
+    this._items.addAll(items);
+    notifyListeners();
+  }
 
+  
   void insertAll(int index, List<T> items) {
     this._items.insertAll(index, items);
     notifyListeners();
