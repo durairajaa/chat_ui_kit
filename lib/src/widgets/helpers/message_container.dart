@@ -65,7 +65,7 @@ BoxDecoration messageDecoration(BuildContext context,
                 BoxShadow(
                   color: Color(0xff636363),
                   offset: Offset(1, 1),
-                  blurRadius: 4,
+                  blurRadius: 2,
                 )
               ],
       borderRadius: BorderRadius.only(
