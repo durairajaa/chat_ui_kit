@@ -59,8 +59,15 @@ BoxDecoration messageDecoration(BuildContext context,
   return BoxDecoration(
       color: color ??
           (messageFlow == MessageFlow.outgoing
-              ? Theme.of(context).primaryColor
-              : CustomColors.incomingMessageContainerColor(context)),
+              ? Color(0xffFFFFFF)
+              : Color(0xffFFF7EB)),
+       boxShadow: [
+                BoxShadow(
+                  color: Color(0xff636363),
+                  offset: Offset(1, 1),
+                  blurRadius: 4,
+                )
+              ],
       borderRadius: BorderRadius.only(
           topLeft: Radius.circular(topLeftRadius),
           topRight: Radius.circular(topRightRadius),
